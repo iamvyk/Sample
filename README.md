@@ -70,7 +70,7 @@ The integration is implemented in accordance with the
 
 ---
 
-### Core Integration : `BamsSubmissionService`
+### Core Integration (VA.Bams.Submission proj) : `BamsSubmissionService` 
 
 **Responsibilities:**
 - Handles OAuth authentication
