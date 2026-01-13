@@ -7,7 +7,7 @@
 
 This project implements an integration between **Visual Approvals** and the **Building Activity Management System (BAMS)** to submit **Prescribed Events** for building permits using the official **BAMS REST API**.
 
-The solution is designed to handle **high-volume permit submissions** efficiently while remaining compliant with BAMS API constraints and regulatory timeframes (e.g. Regulation 47).
+The solution is designed to handle **high-volume permit submissions** efficiently while remaining compliant with BAMS API constraints.
 
 ### Key Capabilities
 
