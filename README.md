@@ -189,7 +189,7 @@ Each submission is fully auditable, including:
 This supports:
 - Regulatory compliance
 - Operational troubleshooting
-- Data reconciliation and replay if required
+- Data reconciliation 
 
 ---
 
