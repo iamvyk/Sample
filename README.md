@@ -149,7 +149,7 @@ This behaviour is known as **API backpressure**.
 
 The recommended strategy is:
 
-> **Send requests in quick succession with controlled parallelism (≈5 concurrent requests).**
+> **Send requests in quick succession with controlled parallelism (5 concurrent requests).**
 
 This aligns with BAMS guidance that requests can be sent without waiting for previous responses, while avoiding excessive concurrency that degrades performance.
 
