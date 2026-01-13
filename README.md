@@ -12,7 +12,7 @@ The solution is designed to handle **high-volume permit submissions** efficientl
 ### Key Capabilities
 
 - Submits **one permit (with multiple prescribed events)** per API request, as required by BAMS
-- Supports **high-volume scenarios** (e.g. ~600 permits)
+- Supports **high-volume scenarios** (e.g. 600 permits)
 - Uses **controlled concurrency** to reduce overall processing time
 - Avoids API overload and latency issues caused by excessive parallel requests
 - Provides **full audit logging** for compliance and troubleshooting
@@ -36,7 +36,7 @@ The integration is implemented in accordance with the
 
 ## Main Components
 
-### UI Layer – `PermitManagementForm`
+### UI Layer : `PermitManagementForm`
 
 **Responsibilities:**
 - Allows users to select permits and prescribed events
@@ -49,7 +49,7 @@ The integration is implemented in accordance with the
 
 ---
 
-### Batch Orchestration – `BamsBatchSubmissionService`
+### Batch Orchestration : `BamsBatchSubmissionService`
 
 **Responsibilities:**
 - Coordinates submission of multiple permits
@@ -70,7 +70,7 @@ The integration is implemented in accordance with the
 
 ---
 
-### Core Integration – `BamsSubmissionService`
+### Core Integration : `BamsSubmissionService`
 
 **Responsibilities:**
 - Handles OAuth authentication
@@ -131,16 +131,15 @@ This ensures:
 
 ### Why Concurrency Is Used
 
-- Each API call takes ~2–4 seconds
-- 600 permits sequentially = ~30–40 minutes
-- Regulation windows require faster processing
+- Each API call takes 2-4 seconds
+- 600 permits sequentially takes 30-40 minutes
 
 ### Why Concurrency Is Limited
 
 When concurrency is too high (e.g. semaphore = 10+):
 
 - Requests are accepted by BAMS
-- Responses slow down significantly
+- Responses slow down
 - Latency increases due to server-side queuing or throttling
 
 This behaviour is known as **API backpressure**.
@@ -166,7 +165,7 @@ This aligns with BAMS guidance that requests can be sent without waiting for pre
 
 **2. Permit-level errors**
 - Apply to all prescribed events
-- Stored once and propagated to each event
+- Stored once
 
 **3. Event-level errors**
 - Validation errors
