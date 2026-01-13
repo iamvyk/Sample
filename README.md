@@ -57,7 +57,7 @@ The integration is implemented in accordance with the
 - Tracks progress and aggregates results
 
 **Why this exists:**
-- Sequential submission of ~600 permits can take ~30–40 minutes
+- Sequential submission of 600 permits can take 30-40 minutes
 - Sending too many concurrent requests risks overwhelming BAMS
 - A bounded semaphore (e.g. **5 concurrent requests**) provides optimal throughput
 
